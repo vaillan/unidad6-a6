@@ -1,5 +1,7 @@
 // Import stylesheets
 import './style.css';
+
+//Variales globales
 let lista = [
   [12, 23, 34, 456, 68, 68],
   [29, 85, 67, 67, 98, 89],
@@ -7,7 +9,12 @@ let lista = [
 
 let diagonalPrincipal = [];
 
+//Proceso principal de la aplicación
 
+/**
+ * Obtiene la diagonal principal de un vector de 2 dimensiones
+ * @returns {void}
+ */
 function getDiagonalPrincipal() {
   for(let i = 0; i< lista.length; i++) {
     diagonalPrincipal.push(lista[i][i]);
@@ -24,7 +31,7 @@ function getDiagonalPrincipal() {
   alert.innerHTML = `
   <div class="text-break">
     <p>Lista original: [${lista[0].toLocaleString()}], [${lista[1].toLocaleString()}]</p>
-    <p>Diagonal principal: ${diagonalPrincipal.toString()}</p>
+    <p>Diagonal principal: [${diagonalPrincipal.toString()}]</p>
   </div>
   `;
 }
